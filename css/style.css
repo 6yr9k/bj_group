@@ -213,7 +213,7 @@ body {
   line-height: 26px;
   /* №3 */
 }
-@media (max-width: 560px) {
+@media (max-width: 767.98px) {
   .header__menu {
     display: none;
   }
@@ -222,6 +222,14 @@ body {
   .header__menu {
     font-size: 16px;
   }
+}
+.header__point {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.header__point:hover {
+  text-shadow: 0.4px 0px 0px #000000, -0.4px 0px 0px #000000;
 }
 .header__link {
   color: #000000;
@@ -235,9 +243,23 @@ body {
   background: #000000;
   border-radius: 14px;
 }
-@media (max-width: 560px) {
+@media (max-width: 767.98px) {
   .header__button {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__button {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .header__button {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 12px 24px;
   }
 }
 
@@ -249,6 +271,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 94px;
+}
+@media (max-width: 991.98px) {
+  .customers__items {
+    margin-bottom: 63px;
+  }
 }
 .customers__img_1 {
   padding: 24px 0px 0px 0px;
@@ -367,52 +394,44 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 50px;
-  margin-bottom: 60px;
-}
-.items-who__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-  padding: 0px 0px 0px 50px;
-  min-width: 369px;
-}
-@media (max-width: 1140px) {
-  .items-who__item {
-    padding: 0px 0px 0px 40px;
-  }
+  margin-bottom: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (max-width: 991.98px) {
-  .items-who__item {
-    padding: 0px 0px 0px 30px;
-    min-width: 200px;
+  .items-who__container {
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 767.98px) {
+  .items-who__container {
+    margin-bottom: 50px;
+  }
+}
+.items-who__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+@media (max-width: 767.98px) {
   .items-who__item {
-    padding: 0;
-    min-width: 370px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     text-align: center;
   }
 }
 .items-who__image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-  padding: 0px 50px 0px 0px;
-}
-@media (max-width: 1140px) {
-  .items-who__image {
-    padding: 0px 40px 0px 0px;
-  }
-}
-@media (max-width: 991.98px) {
-  .items-who__image {
-    padding: 0px 30px 0px 0px;
-  }
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
 }
 @media (max-width: 767.98px) {
   .items-who__image {
-    padding: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 }
 .items-who__img {
@@ -465,4 +484,66 @@ body {
     font-size: 15px;
     line-height: 140%;
   }
+}
+
+.items-who__image_2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+@media (max-width: 767.98px) {
+  .items-who__image_2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+.items-who__item_2 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 767.98px) {
+  .items-who__item_2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+.hurry-up {
+  margin-bottom: 66px;
+}
+.hurry-up__container {
+  background: #000000;
+  border-radius: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hurry-up__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 126%;
+  /* identical to box height, or 28px */
+  padding: 0px 0px 0px 17px;
+  color: #FFFFFF;
+}
+.hurry-up__button {
+  display: inline-block;
+  background: #ffffff;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 126%;
+  /* identical to box height, or 28px */
+  text-align: center;
+  color: #161719;
+  border-radius: 10px;
+  padding: 14px 42px;
 }
